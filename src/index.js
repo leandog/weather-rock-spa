@@ -1,20 +1,17 @@
 import React from "react";
 import ReactDOM, { render } from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import App from "./js/components/app";
+import rootReducer from "./js/reducers";
 
 import "./index.scss";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Weather Rock</h1>
-        <p>Hello, Weather Rock!</p>
-      </div>
-    );
-  }
-}
+const store = createStore(rootReducer);
 
 render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById("root")
 );
