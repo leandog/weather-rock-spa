@@ -15,7 +15,7 @@ class App extends React.Component {
     const content = this.props.forecast !== "" ? <WeatherReport /> : <Question />;
     return (
       <div>
-        <h1>The Weather Rock</h1>
+        <h1 className="logo">The Weather Rock <sub>Your Source For Weather</sub></h1>
         {content}
       </div>
     );

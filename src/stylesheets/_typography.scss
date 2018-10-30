@@ -1,0 +1,28 @@
+body {
+  font-family: $body-fonts;
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-fonts;
+  font-weight: bold;
+}
+
+h1.logo {
+  font-size: 68px;
+  position: relative;
+  color: $yellow;
+  text-shadow: 0 0 2px black;
+
+  sub {
+    position: absolute;
+    bottom: 2px;
+    left: 25px;
+    text-shadow: -2px -2px 2px $dark-blue;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: .1px;
+    color: $light-blue-alpha;
+  }
+}
