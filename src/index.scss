@@ -1,5 +1,8 @@
 @import "./stylesheets/variables";
+@import "./stylesheets/mixins";
 @import "./stylesheets/typography";
+@import "./stylesheets/forms";
+@import "./stylesheets/weatherreport";
 
 html {
   height: 100%;
@@ -14,34 +17,4 @@ body {
 #root {
   max-width: 960px;
   margin: 0 auto;
-}
-
-.forecast {
-  border: 1px solid lighten($med-blue-alpha, 15%);
-  background: lighten($med-blue-alpha, 5%);
-  background: linear-gradient(0deg, lighten($dark-blue-alpha, 5%), lighten($med-blue-alpha, 5%));
-  width: 225px;
-  min-height: 435px;
-  text-align: center;
-
-  aside {
-    color: $dark-blue;
-    text-transform: uppercase;
-    font-family: $header-fonts;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 2px;
-    margin-bottom: 2 * $gutter;
-    padding: $gutter 0;
-    background: $yellow;
-    background: radial-gradient(ellipse, $yellow 0%, $yellow 66%, darken($yellow, 33%) 100%);
-  }
-
-  p {
-    color: $yellow;
-    margin: 2px $gutter;
-    font-size: 22px;
-  }
-
-  /* TODO: include weather icons */
 }

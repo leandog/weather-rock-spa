@@ -1,0 +1,61 @@
+.weather-report {
+  display: flex;
+  position: relative;
+  padding-top: 6 * $gutter;
+  flex-direction: column;
+
+  @include tablet-up {
+    flex-direction: row;
+    padding-top: 4 * $gutter;
+  }
+
+
+  h2 {
+    position: absolute;
+    margin-top: -6 * $gutter;
+    font-size: 24px;
+
+    @include tablet-up {
+      margin-top: -4 * $gutter;
+      font-size: 32px;
+    }
+  }
+
+  .forecast {
+    border: 1px solid lighten($med-blue-alpha, 15%);
+    background: lighten($med-blue-alpha, 5%);
+    background: linear-gradient(0deg, lighten($dark-blue-alpha, 5%), lighten($med-blue-alpha, 5%));
+    min-height: 435px;
+    text-align: center;
+    margin-bottom: 2 * $gutter;
+
+    @include tablet-up {
+      width: 225px;
+      margin-left: 3 * $gutter;
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+
+    aside {
+      color: $dark-blue;
+      text-transform: uppercase;
+      font-family: $header-fonts;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 2px;
+      margin-bottom: 2 * $gutter;
+      padding: $gutter 0;
+      background: $yellow;
+      background: linear-gradient(to bottom right, darken($yellow, 25%) 0%, $yellow 22%, $yellow 72%, darken($yellow, 25%) 100%);
+    }
+
+    p {
+      color: $yellow;
+      margin: 2px $gutter;
+      font-size: 22px;
+    }
+
+    /* TODO: include weather icons */
+  }
+}
