@@ -33,7 +33,6 @@ class Question extends React.Component {
     }
 
     const action = question.input.action(answer);
-    console.log({answer, action});
     this.props.onAnswerQuestion(action);
   }
 
