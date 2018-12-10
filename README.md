@@ -16,6 +16,16 @@ After installing those dependencies, open a terminal and do the following:
 
 3. run `npm start` to run the application in development mode
 
+## Local testing
+
+You'll need to install additional dependencies to test: RVM, PhantomJS. (After installing RVM, `cd` into the project directory again, and RVM will attempt to switch to Ruby version configured for this project. It will prompt you if that version is not installed; follow the prompts.) TODO: link to RVM and PhantomJS versions
+
+After those dependencies are installed, you can execute the Cucumber test suite by:
+
+1. first ensure the required Ruby gems (libraries) are installed; run: `bundle` (required only the very first time or if you make changes to the Ruby dependencies)
+
+2. execute `cucumber` to run the tests
+
 ## Deployment
 
 To build deployable package:
