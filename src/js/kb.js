@@ -8,7 +8,10 @@ import {
 export default {
   // initial/intermediate facts
   "name": {
-    label: "What is your name?",
+    label: {
+      en: "What is your name?",
+      es: "¿Cómo te llamas?"
+    },
     input: {
       type: "text",
       action: assertName

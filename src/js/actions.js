@@ -29,3 +29,10 @@ export const assertCondition = answer => {
     answer: answer
   };
 };
+
+export const switchLanguage = lang => {
+  return {
+    type: "SWITCH_LANGUAGE",
+    lang: lang
+  };
+};

@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import { TextInput, SelectInput, YesNoInput } from "./inputs";
 
 const mapStateToProps = state => ({
-  question: state.question
+  question: state.question,
+  lang: state.lang
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -41,7 +42,7 @@ class Question extends React.Component {
 
     let inputField = null;
     if (question.input.type === "text") {
-      inputField = <TextInput label={question.label} />;
+      inputField = <TextInput label={question.label[this.props.lang]} />;
     } else if (question.input.type === "select") {
       inputField = <SelectInput label={question.label} options={question.input.options} />;
     } else if (question.input.type === "yesno") {

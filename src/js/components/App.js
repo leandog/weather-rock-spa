@@ -3,11 +3,17 @@ import { connect } from "react-redux";
 import LanguageSwitcher from "./languageswitcher";
 import Question from "./question";
 import WeatherReport from "./weatherreport";
+import { switchLanguage } from "../actions";
 
 const mapStateToProps = state => ({
   question: state.question,
   forecast: state.forecast,
-  history: state.history
+  history: state.history,
+  lang: state.lang
+});
+
+const mapDispatchToProps = dispatch => ({
+  switchLang: action => { dispatch(action) }
 });
 
 class App extends React.Component {
@@ -19,7 +25,8 @@ class App extends React.Component {
   }
 
   onLanguageSwitch(lang) {
-    console.log("onLanguageSwitch:", lang);
+    const action = switchLanguage(lang);
+    this.props.switchLang(action);
   }
 
   render() {
@@ -36,4 +43,4 @@ class App extends React.Component {
   }
 };
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
