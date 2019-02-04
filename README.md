@@ -18,9 +18,11 @@ After installing those dependencies, open a terminal and do the following:
 
 ## Local testing
 
-You'll need to install additional dependencies to test: RVM, PhantomJS. (After installing RVM, `cd` into the project directory again, and RVM will attempt to switch to Ruby version configured for this project. It will prompt you if that version is not installed; follow the prompts.) TODO: link to RVM and PhantomJS versions
+You'll need to install additional dependencies to test: RVM, PhantomJS. (After installing RVM, `cd` into the project directory again, and RVM will attempt to switch to Ruby version configured for this project. It will prompt you if that version is not installed; follow the prompts.) See also: https://rvm.io/, http://phantomjs.org/download.html; PhantomJS can also be installed with homebrew on Mac.
 
-After those dependencies are installed, you can execute the Cucumber test suite by:
+(Note: PhantomJS hasn't been updated in several years, but for this small example it serves the purpose of demonstrating one style of testing via browser automation; see also: https://www.google.com/search?q=phantomjs+alternative)
+
+After those dependencies are installed, you can execute the Cucumber test suite:
 
 1. first ensure the required Ruby gems (libraries) are installed; run: `bundle` (required only the very first time or if you make changes to the Ruby dependencies)
 
